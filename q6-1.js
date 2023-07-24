@@ -8,4 +8,6 @@ function isPalindrome(string){
         console.log("It's a palindrome!");
     } else (console.log(reverseString));
 }
-isPalindrome('adam');
+
+//test function
+isPalindrome('hello');

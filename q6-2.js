@@ -1,20 +1,27 @@
-function findMissingNumber(collection){
-    //create a set to store the range of numbers
-    const set = new Set();
-    // loop through set and populate with range of contents in array
-    for (let i=0; i < collection.length; i++);
-    set.add(collection[i]);
-}
+function findMissing(arr,N){
+    let i;
+    // create an empty array
+    var temp = [];
+    // set all initial values to zero
+    for (i = 0; i <= N; i++) {
+              temp[i] = 0;
+          }
+    // loop through and assign a value of 1 to every present element in the loop
+          for (i = 0; i < N; i++) {
+              temp[arr[i] - 1] = 1;
+          }
+    // then search through temp and find whatever value has a zero, and this is the missing element
+          let ans = 0;
+          for (i = 0; i <= N; i++) {
+              if (temp[i] == 0)
+                  ans = i + 1;
+          }
+          console.log(ans);
+  }
 
-//loop through array containing missing figures and compare values to set contents 
-//containing complete numbers and identify missing number(s)
+// testing out code
+var arr = [1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,45]
+  
+var n = arr.length;
 
-    for (let i = 1; i <= collection.length + 1; i++) {
-        if (!set.has(i)) {
-            return i;
-        }
-    }
-
-var testarray = [1, 2, 3, 4, 5, 7, 8, 9];
-
-findMissingNumber(testarray);
+findMissing(arr, n)
