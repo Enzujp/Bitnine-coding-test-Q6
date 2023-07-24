@@ -1,3 +1,5 @@
+//Using Hashing
+
 function findMissing(arr,N){
     let i;
     // create an empty array
