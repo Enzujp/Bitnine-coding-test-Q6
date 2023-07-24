@@ -7,11 +7,10 @@ function isPalindrome(string) {
         //compare first half of string with last half
         if (string[i] !== string[len - 1 - i]) {
             reverseString(string);
+            break;
         } 
-            else if (string.length < 2){
-                console.log("enter a string that is at least two digits")
-            } else (console.log("It's a palindrome "))
-        }
+    }
+    console.log( "it's a palindrome");
 }
 
 function reverseString(string) {
@@ -21,4 +20,6 @@ function reverseString(string) {
 
 }
 
+// const userInput = prompt('Enter a string to check : ');
 
+isPalindrome('money')
